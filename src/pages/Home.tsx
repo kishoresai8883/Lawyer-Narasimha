@@ -100,7 +100,7 @@ export function Home() {
         {/* Background Image with elegant overlay */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/lawyer_office_hero.png"
+            src={`${import.meta.env.BASE_URL}lawyer_office_hero.png`}
             alt="Lawyer Office backdrop"
             className="w-full h-full object-cover object-center scale-105 filter brightness-35 contrast-105 saturate-75 transition-all duration-1000"
           />

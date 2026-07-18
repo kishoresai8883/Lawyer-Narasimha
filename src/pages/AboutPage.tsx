@@ -19,7 +19,7 @@ export function AboutPage() {
               {/* Visual profile image */}
               <div className="relative overflow-hidden rounded-lg shadow-2xl gold-glow bg-brand-dark max-w-sm">
                 <img
-                  src="/narasimha_profile.png"
+                  src={`${import.meta.env.BASE_URL}narasimha_profile.png`}
                   alt="Advocate Narasimha Portrait"
                   className="w-full h-auto object-cover object-center filter grayscale-[25%] contrast-105 hover:grayscale-0 duration-500 hover:scale-105"
                 />
