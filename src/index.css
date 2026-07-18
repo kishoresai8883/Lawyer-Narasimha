@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-gold: #C5A880;
+  --color-brand-gold-dark: #A3845C;
+  --color-brand-gold-light: #E2D4BF;
+  --color-brand-navy: #0F1E36;
+  --color-brand-navy-dark: #070E1A;
+  --color-brand-dark: #0A0D14;
+  --color-brand-dark-card: #121824;
+  --color-brand-text-gold: #E5D5C0;
+  
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Outfit", system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    background-color: var(--color-brand-dark);
+    color: #f3f4f6;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: var(--color-brand-dark);
+  }
+}
+
+/* Premium Typography & FX Utilities */
+
+.serif-title {
+  font-family: var(--font-serif);
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #FDF0CD 0%, #D4AF37 50%, #A3845C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border {
+  border-image: linear-gradient(to right, #A3845C, #D4AF37, #A3845C) 1;
+}
+
+.gold-glow {
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+}
+
+.gold-glow-hover:hover {
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+  border-color: rgba(212, 175, 55, 0.4);
+  transform: translateY(-4px);
+}
+
+.glassmorphism {
+  background: rgba(18, 24, 36, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-nav {
+  background: rgba(10, 13, 20, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+/* Custom Micro-animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes drawLine {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-draw-line {
+  animation: drawLine 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0D14;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C5A880;
+}
